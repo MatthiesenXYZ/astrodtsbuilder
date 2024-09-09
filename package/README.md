@@ -6,6 +6,7 @@ This utility function is used to build a declaration file for use with Astro's `
 
 ```ts
 // Import and use the function
+import buildDeclarationFile from '@matthiesenxyz/astrodtsbuilder';
 const dts = buildDeclarationFile();
 
 // Add a note to the file
@@ -41,6 +42,10 @@ declare module 'example:module' {
     //** This is the default Module * /
     const defaultExport: import('@my-example/module').ExampleModule;
     export default defaultExport;
-    
+
 }
 ```
+
+## Licensing
+
+[MIT Licensed](./LICENSE). Made with ❤️ by [Adam Matthiesen](https://github.com/adammatthiesen).
