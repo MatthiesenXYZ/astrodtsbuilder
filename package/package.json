@@ -1,6 +1,6 @@
 {
   "name": "@matthiesenxyz/astrodtsbuilder",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A utility function is used to build declaration files for use with Astro's `injectTypes` function added in the `astro:config:done` Integration Hook in `Astro 4.14.0`.",
   "author": {
     "email": "adam@matthiesen.xyz",
@@ -9,11 +9,11 @@
   },
   "license": "MIT",
   "keywords": [
-    "astro-integration",
     "astro-component",
     "withastro",
     "astro",
-    "feedback"
+    "dts",
+    "utility"
   ],
   "homepage": "https://github.com/matthiesenxyz/astrodtsbuilder",
   "publishConfig": {
