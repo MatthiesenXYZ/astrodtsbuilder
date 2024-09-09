@@ -1,0 +1,41 @@
+{
+  "name": "@matthiesenxyz/astrodtsbuilder",
+  "version": "0.1.0",
+  "description": "A utility function is used to build declaration files for use with Astro's `injectTypes` function added in the `astro:config:done` Integration Hook in `Astro 4.14.0`.",
+  "author": {
+    "email": "adam@matthiesen.xyz",
+    "name": "Adam Matthiesen",
+    "url": "https://matthiesen.xyz"
+  },
+  "license": "MIT",
+  "keywords": ["astro-integration", "astro-component", "withastro", "astro", "feedback"],
+  "homepage": "https://github.com/matthiesenxyz/astrodtsbuilder",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "default": "./dist/types.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "astro": "catalog:astrojs"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:types",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,21 @@
+packages:
+  - package
+  - packages/*
+  - playground
+
+catalog:
+  "@biomejs/biome": 1.8.3
+  "@changesets/cli": ^2.27.8
+  "@changesets/config": ^3.0.3
+  tsup: ^8.2.4
+  typescript: ^5.5.4
+
+catalogs:
+  deps:
+    astro-integration-kit: ^0.16.1
+  astrojs:
+    "@astrojs/check": ^0.9.3
+    astro: ^4.14
+  types:
+    "@types/micromatch": ^4.0.9
+    "@types/node": ^20.16.3

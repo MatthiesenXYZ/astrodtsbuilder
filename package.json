@@ -1,0 +1,24 @@
+{
+  "name": "root",
+  "private": true,
+  "packageManager": "pnpm@9.9.0",
+  "engines": {
+    "node": ">=20.10"
+  },
+  "scripts": {
+    "package:dev": "pnpm --filter @matthiesenxyz/astrodtsbuilder dev",
+    "package:build": "pnpm --filter @matthiesenxyz/astrodtsbuilder build",
+    "playground:dev": "pnpm --filter playground dev",
+    "ci:install": "pnpm install --frozen-lockfile",
+    "dev": "pnpm --stream -r -parallel dev",
+    "changeset": "changeset",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@changesets/cli": "catalog:",
+    "@changesets/config": "catalog:",
+    "typescript": "catalog:"
+  }
+}
