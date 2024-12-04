@@ -3,7 +3,7 @@ name: Build Previews
 on: [pull_request]
 
 jobs:
-  build:
+  build-previews:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
