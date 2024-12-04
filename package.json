@@ -9,16 +9,18 @@
     "package:dev": "pnpm --filter @matthiesenxyz/astrodtsbuilder dev",
     "package:build": "pnpm --filter @matthiesenxyz/astrodtsbuilder build",
     "playground:dev": "pnpm --filter playground dev",
-    "ci:install": "pnpm install --frozen-lockfile",
     "dev": "pnpm --stream -r -parallel dev",
     "changeset": "changeset",
     "lint": "biome check .",
-    "lint:fix": "biome check --write ."
+    "lint:fix": "biome check --write .",
+    "ci:install": "pnpm install --frozen-lockfile",
+    "ci:snapshot": "pnpx pkg-pr-new publish --pnpm './package/'"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
     "@changesets/cli": "catalog:",
     "@changesets/config": "catalog:",
+    "pkg-pr-new": "catalog:",
     "typescript": "catalog:"
   }
 }

@@ -12,12 +12,12 @@
   },
   "dependencies": {
     "@matthiesenxyz/astrodtsbuilder": "workspace:*",
-    "astro": "catalog:astrojs",
-    "astro-integration-kit": "catalog:deps"
+    "astro": "catalog:",
+    "astro-integration-kit": "catalog:"
   },
   "devDependencies": {
-    "@astrojs/check": "catalog:astrojs",
-    "@types/node": "catalog:types",
+    "@astrojs/check": "catalog:",
+    "@types/node": "catalog:",
     "typescript": "catalog:"
   }
 }

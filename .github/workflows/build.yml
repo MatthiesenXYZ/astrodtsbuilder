@@ -1,4 +1,4 @@
-name: Build
+name: Build Previews
 
 on: [pull_request]
 
@@ -8,18 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup PNPM
-        run: corepack enable && pnpm -v
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.10
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm ci:install
+  
+      - name: Install Tools & Dependencies
+        uses: ./.github/actions/install
 
       - name: Build
         run: pnpm package:build
+  
+      - name: Publish packages
+        run: pnpm ci:snapshot

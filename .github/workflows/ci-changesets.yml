@@ -1,0 +1,40 @@
+name: CI - Changesets
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+    contents: write
+    pull-requests: write
+    id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+  
+      - name: Install Tools & Dependencies
+        uses: ./.github/actions/install
+
+      - name: Build
+        run: pnpm package:build
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+            setupGitUser: true
+            commit: "👷 [ci]: Version Packages"
+            title: "👷 [ci]: Ready for Release"
+            version: pnpm ci:version
+            publish: pnpm ci:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

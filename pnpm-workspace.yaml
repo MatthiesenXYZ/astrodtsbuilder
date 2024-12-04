@@ -4,18 +4,18 @@ packages:
   - playground
 
 catalog:
+  "@astrojs/check": ^0.9.4
   "@biomejs/biome": 1.8.3
   "@changesets/cli": ^2.27.8
   "@changesets/config": ^3.0.3
-  tsup: ^8.2.4
-  typescript: ^5.5.4
+  "@types/micromatch": ^4.0.9
+  "@types/node": ^20.16.3
+  astro: ^5.0
+  astro-integration-kit: ^0.17.0
+  pkg-pr-new: ^0.0.32
+  tsup: ^8.3.5
+  typescript: ^5.7.2
 
 catalogs:
-  deps:
-    astro-integration-kit: ^0.16.1
-  astrojs:
-    "@astrojs/check": ^0.9.3
-    astro: ^4.14
-  types:
-    "@types/micromatch": ^4.0.9
-    "@types/node": ^20.16.3
+  peerDeps:
+    astro: ^4.14 || ^5.0
