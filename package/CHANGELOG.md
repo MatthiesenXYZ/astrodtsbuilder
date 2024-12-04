@@ -1,5 +1,11 @@
 # @matthiesenxyz/astrodtsbuilder
 
+## 0.2.0
+
+### Minor Changes
+
+- f40c7fd: Add support for AstroV5
+
 ## 0.1.2
 
 ### Patch Changes
